@@ -41,7 +41,7 @@ broker = '198.199.107.70'
 port = 1883
 topic = "arlomatter"
 # generate client ID with pub prefix randomly
-client_id = 1234
+client_id = '1234'
 username = 'arlo'
 password = 'matter'
 
