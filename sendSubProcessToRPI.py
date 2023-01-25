@@ -3,4 +3,4 @@
 
 import os 
 
-os.system("mattertool on")
+os.system("mattertool", "on")
