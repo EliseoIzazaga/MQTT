@@ -1,6 +1,11 @@
 #Eliseo Izazaga
 # to test subprocess calls correctly in the RPI system
 
-import os 
-cmdToSend = r'mattertool on'
-os.system(cmdToSend)
+import subprocess
+
+x = subprocess.run(['mattertool on'], shell=True)
+print(x)
+print(x.args)
+print(x.returncode)
+print(x.stdout)
+print(x.stderr)
