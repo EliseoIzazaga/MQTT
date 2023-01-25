@@ -68,15 +68,15 @@ def subscribe(client: mqtt_client):
         print("DECODING MESSAGE: ")
         if "on" in inMessage:
             print(inMessage)
-            subprocess.run(["mattertool on"])
+            subprocess.run("mattertool on")
         if "off" in inMessage:
             print(inMessage)
-            subprocess.run(["mattertool off"])
+            subprocess.run("mattertool off")
         if "on" in inMessage:
             print(inMessage)
         if "" in inMessage:
             print(inMessage)
-            subprocess.run(["mattertool startThread"])
+            subprocess.run("mattertool startThread")
         
         
 
