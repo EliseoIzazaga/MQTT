@@ -33,6 +33,7 @@ b.	Publish
 '''
 import time 
 import random
+import subprocess
 
 from paho.mqtt import client as mqtt_client
 
@@ -41,7 +42,7 @@ broker = '198.199.107.70'
 port = 1883
 topic = "arlomatter"
 # generate client ID with pub prefix randomly
-client_id = '1234'
+client_id = "1234"
 username = 'arlo'
 password = 'matter'
 
@@ -63,6 +64,24 @@ def connect_mqtt() -> mqtt_client:
 def subscribe(client: mqtt_client):
     def on_message(client, userdata, msg):
         print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
+        inMessage = str(msg.payload.decode())
+        print("DECODING MESSAGE: ")
+        if "on" in inMessage:
+            print(inMessage)
+            subprocess.run(["mattertool on"])
+        if "off" in inMessage:
+            print(inMessage)
+            subprocess.run(["mattertool off"])
+        if "on" in inMessage:
+            print(inMessage)
+        if "" in inMessage:
+            print(inMessage)
+            subprocess.run(["mattertool startThread"])
+        
+        
+
+            
+
 
     client.subscribe(topic)
     client.on_message = on_message
