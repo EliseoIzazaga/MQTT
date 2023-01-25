@@ -3,4 +3,4 @@
 
 import subprocess
 
-subprocess.run(['mattertool', 'on'])
+subprocess.run(["ls", "-l"])
