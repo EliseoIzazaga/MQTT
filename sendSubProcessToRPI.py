@@ -3,7 +3,7 @@
 
 import subprocess
 
-x = subprocess.run(['ubuntu@ubuntu:~$ mattertool on'], shell=True)
+x = subprocess.run(['cd home/connectedhomeip/out/standalone/chip-tool onoff on 1122 1'], shell=True)
 print(x)
 print(x.args)
 print(x.returncode)
