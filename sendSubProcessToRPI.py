@@ -3,4 +3,4 @@
 
 import os 
 
-matterInstance = os.Popen(['mattertool on'])
+matterInstance = os.popen(['mattertool on'])
