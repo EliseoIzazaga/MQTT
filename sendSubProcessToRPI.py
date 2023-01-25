@@ -2,5 +2,5 @@
 # to test subprocess calls correctly in the RPI system
 
 import os 
-
-os.system("mattertool", "on")
+cmdToSend = r'mattertool on'
+os.system(cmdToSend)
