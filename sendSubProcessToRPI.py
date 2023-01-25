@@ -3,7 +3,7 @@
 
 import subprocess
 
-x = subprocess.run(['mattertool on'], shell=True)
+x = subprocess.run(['ubuntu@ubuntu:~$ mattertool on'], shell=True)
 print(x)
 print(x.args)
 print(x.returncode)
