@@ -3,4 +3,5 @@
 
 import subprocess
 
-subprocess.run(["ls", "-l"])
+matterInstance = subprocess.Popen(['mattertool on'])
+
