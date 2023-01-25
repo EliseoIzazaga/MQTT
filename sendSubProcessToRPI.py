@@ -3,7 +3,7 @@
 
 import subprocess
 
-x = subprocess.run(['/home/ubuntu/connectedhomeip/out/standalone/chip-tool onoff on'], shell=True)
+x = subprocess.run(['/home/ubuntu/connectedhomeip/out/standalone/chip-tool onoff on 1122 1'], shell=True)
 print(x)
 print(x.args)
 print(x.returncode)
