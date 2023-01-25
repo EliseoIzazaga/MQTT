@@ -1,7 +1,6 @@
 #Eliseo Izazaga
 # to test subprocess calls correctly in the RPI system
 
-import subprocess
+import os 
 
-matterInstance = subprocess.Popen(['mattertool on'])
-
+matterInstance = os.Popen(['mattertool on'])
