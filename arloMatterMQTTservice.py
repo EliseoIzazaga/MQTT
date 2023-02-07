@@ -1,3 +1,4 @@
+
 #Eliseo Izazaga
 #This application is meant to run as a service on a chiptool/MATTER device, 
 #this service will receive subscribe as a "listener" to an MQTT broker (already on then arlo cloud) 
@@ -23,9 +24,7 @@ o	["device-id": "12345", "op-type": "comm", "op-value": ""]
 o	["device-id": "12345", "op-type": "admin", "op-value": "on"]
 •	Turn Off: matter tool off
 o	["device-id": "12345", "op-type": "admin", "op-value": "off"]
-
 4.	Example Command-line
-
 a.	Subscribe
 •	mosquitto_sub -h 198.199.107.70 -p 1883 -u arlo -P matter -t arlomatter
 b.	Publish
@@ -68,15 +67,26 @@ def subscribe(client: mqtt_client):
         print("DECODING MESSAGE: ")
         if "on" in inMessage:
             print(inMessage)
-            subprocess.run("mattertool on")
+            x = subprocess.run(['/home/ubuntu/connectedhomeip/out/standalone/chip-tool onoff on 1122 1'], shell=True) #This command works. 
+            print(x)
+            print(x.args)
+            print(x.returncode)
+            print(x.stdout)
+            print(x.stderr)
         if "off" in inMessage:
             print(inMessage)
-            subprocess.run("mattertool off")
-        if "on" in inMessage:
-            print(inMessage)
+            x = subprocess.run(['/home/ubuntu/connectedhomeip/out/standalone/chip-tool onoff off 1122 1'], shell=True) #This command works. 
+            print(x)
+            print(x.args)
+            print(x.returncode)
+            print(x.stdout)
         if "" in inMessage:
-            print(inMessage)
-            subprocess.run("mattertool startThread")
+            x = subprocess.run(['/home/ubuntu/connectedhomeip/out/standalone/chip-tool pairing ble-wifi 1122 Eliseo arlomatter 20202021 3840'], shell=True) #This command works. 
+            print(x)
+            print(x.args)
+            print(x.returncode)
+            print(x.stdout)
+            
         
         
 
