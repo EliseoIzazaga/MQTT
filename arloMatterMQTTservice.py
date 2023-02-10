@@ -81,7 +81,7 @@ def subscribe(client: mqtt_client):
             print(x.returncode)
             print(x.stdout)
         if "" in inMessage:
-            x = subprocess.run(['/home/ubuntu/connectedhomeip/out/standalone/chip-tool pairing ble-wifi 1122 Eliseo arlomatter 20202021 3840'], shell=True) #This command works. 
+            x = subprocess.run(['/home/ubuntu/connectedhomeip/out/standalone/chip-tool pairing ble-wifi 1122 HOMENW 305995135 20202021 3840'], shell=True) #This command works. 
             print(x)
             print(x.args)
             print(x.returncode)
