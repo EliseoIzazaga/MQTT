@@ -1,4 +1,4 @@
-
+#this is for Eli's device, 
 #Eliseo Izazaga
 #This application is meant to run as a service on a chiptool/MATTER device, 
 #this service will receive subscribe as a "listener" to an MQTT broker (already on then arlo cloud) 
@@ -81,7 +81,7 @@ def subscribe(client: mqtt_client):
             print(x.returncode)
             print(x.stdout)
         if "" in inMessage:
-            x = subprocess.run(['/home/ubuntu/connectedhomeip/out/standalone/chip-tool pairing ble-wifi 1122 HOMENW 305995135 20202021 3840'], shell=True) #This command works. 
+            x = subprocess.run(['/home/ubuntu/connectedhomeip/out/standalone/chip-tool pairing ble-wifi 1122 NETGEAR70 rapidunicorn533 20202021 3840'], shell=True) #This command works. 
             print(x)
             print(x.args)
             print(x.returncode)
